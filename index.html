@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>revday | Start and grow your service business without the guesswork</title>
+  <meta name="description" content="revday gives service business owners the structure, systems, and support to build properly — from first client to fully automated business.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page-wrap" id="page-wrap">
+<div class="page-transition" id="page-transition" aria-hidden="true"></div>
+<!-- ── Booking modal (from BLAST) ─────────────────────────────────────── -->
+<div class="booking-overlay" id="booking-overlay" role="dialog" aria-modal="true" aria-label="Book a free chat">
+  <div class="booking-box">
+    <div class="booking-header">
+      <p class="booking-title">Book a free chat</p>
+      <button type="button" class="booking-close" id="booking-close" aria-label="Close booking">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <iframe
+      class="booking-iframe"
+      src="https://link.revday.io/widget/booking/cstBzKAskck3gonfDRr7"
+      title="Book a free chat with revday"
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+<!-- ============================================================
+     NAVIGATION (from Code 2 — BLAST)
+============================================================ -->
+<nav class="nav" id="main-nav" aria-label="Main navigation">
+  <div class="nav-inner container">
+    <a href="https://www.revday.io/" class="nav-logo" aria-label="revday home">
+      <img src="https://storage.googleapis.com/msgsndr/nEVZhTSOV8O07l1C1YTn/media/65fe79970013ad70b4ac0242.svg"
+           alt="revday" loading="eager">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://www.revday.io/start">How it works</a></li>
+      <li class="nav-drop">
+        <button type="button" class="nav-drop-btn" aria-haspopup="true" aria-expanded="false">
+          How we help
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <ul class="nav-drop-menu">
+          <li><a class="nav-drop-item" href="https://www.revday.io/services/blast"><span class="nav-drop-item-title">BLAST</span><span class="nav-drop-item-desc">For businesses with 0–5 clients</span></a></li>
+          <li><a class="nav-drop-item" href="https://www.revday.io/services/csa"><span class="nav-drop-item-title">CSA</span><span class="nav-drop-item-desc">For businesses ready to scale</span></a></li>
+          <li><a class="nav-drop-item" href="https://www.revday.io/features"><span class="nav-drop-item-title">Platform features</span><span class="nav-drop-item-desc">Everything inside revday</span></a></li>
+        </ul>
+      </li>
+      <li><a href="https://www.revday.io/about">Who we are</a></li>
+      <li><a href="https://www.revday.io/tools">Free tools</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://revday-b4uh451y.scoreapp.com/" class="nav-cta ghl-popup-quiz" target="_blank" rel="noopener noreferrer">Take the clarity quiz</a>
+      <a href="https://app.revday.io/" class="nav-login" target="_blank" rel="noopener noreferrer">Log in</a>
+    </div>
+    <button type="button" class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- ============================================================
+     MOBILE NAV (from Code 2 — BLAST Apple-style drawer)
+============================================================ -->
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation" hidden>
+  <div class="mobile-nav-header">
+    <img src="https://storage.googleapis.com/msgsndr/nEVZhTSOV8O07l1C1YTn/media/65fe79970013ad70b4ac0242.svg" alt="revday" height="32">
+    <button type="button" class="mobile-nav-close" id="mobile-close" aria-label="Close menu">✕</button>
+  </div>
+  <nav class="mobile-nav-links" aria-label="Mobile navigation">
+    <div class="mobile-nav-section">
+      <p class="mobile-nav-label">How we help</p>
+      <a class="mobile-nav-link" href="https://www.revday.io/services/blast">
+        <span>BLAST<small>For businesses with 0–5 clients</small></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <a class="mobile-nav-link" href="https://www.revday.io/services/csa">
+        <span>CSA<small>For businesses ready to scale</small></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <a class="mobile-nav-link" href="https://www.revday.io/features">
+        <span>Platform features<small>Everything inside revday</small></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+    <div class="mobile-nav-section">
+      <p class="mobile-nav-label">Company</p>
+      <a class="mobile-nav-link" href="https://www.revday.io/start">
+        <span>How it works</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <a class="mobile-nav-link" href="https://www.revday.io/about">
+        <span>Our story</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <a class="mobile-nav-link" href="https://www.revday.io/tools">
+        <span>Free tools</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+  </nav>
+  <div class="mobile-nav-footer">
+    <a href="https://revday-b4uh451y.scoreapp.com/" class="btn-primary-v2 ghl-popup-quiz" target="_blank" rel="noopener noreferrer">Take the clarity quiz</a>
+    <button type="button" class="btn-outline-v2 ghl-popup-chat mobile-nav-chat-btn">Book a quick chat</button>
+    <a href="https://app.revday.io/" class="btn-outline-v2" target="_blank" rel="noopener noreferrer">Log in</a>
+  </div>
+</div>
+<!-- ============================================================
+     HERO (Code 2 layout with Code 1 home page content)
+============================================================ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left reveal">
+        <div class="hero-badge">For service business owners across Australia</div>
+        <h1 class="hero-title">Start and grow your service business <span class="accent">without the guesswork.</span></h1>
+        <p class="hero-sub">From your first client to a fully automated business, revday gives you the structure, systems, and support to build it right, in the right order.</p>
+        <div class="hero-snippet">
+          <div class="snippet-meta">
+            <span class="snippet-stars">★★★★★</span>
+            <span class="snippet-divider">|</span>
+            <span>Christine · Google Review</span>
+          </div>
+          <p class="snippet-quote">"I just wish I'd hired Noah and revday from day one."</p>
+        </div>
+        <div class="hero-ctas">
+          <a href="https://revday-b4uh451y.scoreapp.com/" class="btn-primary-v2 ghl-popup-quiz" target="_blank" rel="noopener noreferrer">Take the clarity quiz</a>
+          <button type="button" class="btn-outline-v2 ghl-popup-chat" id="hero-chat-btn">Book a quick chat</button>
+        </div>
+        <p class="hero-microcopy">No sales pressure. Just clarity on what to fix first.</p>
+      </div>
+      <div class="hero-stages-right reveal reveal-delayed">
+        <div class="hero-stage-card active" data-stage="starting">
+          <div class="hero-stage-num">1</div>
+          <div>
+            <div class="hero-stage-label">Just starting out</div>
+            <div class="hero-stage-text">0–2 clients</div>
+            <div class="hero-stage-detail">Unsure what to set up first. Offer feels vague. Tech feels overwhelming. Sales calls feel like guesswork.</div>
+          </div>
+        </div>
+        <div class="hero-stage-card" data-stage="messy">
+          <div class="hero-stage-num">2</div>
+          <div>
+            <div class="hero-stage-label">In the messy middle</div>
+            <div class="hero-stage-text">2–5 clients</div>
+            <div class="hero-stage-detail">Following up from memory, losing leads. Replies aren't consistent. Bookings feel chaotic. Built out of order.</div>
+          </div>
+        </div>
+        <div class="hero-stage-card" data-stage="growth">
+          <div class="hero-stage-num">3</div>
+          <div>
+            <div class="hero-stage-label">Ready to scale</div>
+            <div class="hero-stage-text">5+ clients</div>
+            <div class="hero-stage-detail">Juggling too many tools. Nothing is in one place. You're the bottleneck. Growth feels like more work, not more freedom.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Trust strip (Code 2 style) -->
+<div class="trust-strip">
+  <div class="container">
+    <ul class="trust-list">
+      <li class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        5.0 on Google
+      </li>
+      <li class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Done with you, not DIY
+      </li>
+      <li class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        No tech skills required
+      </li>
+      <li class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        No lock-in contracts
+      </li>
+      <li class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        24/7 support
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- ─── TRUSTED BY TICKER ──────────────────────────────────────────────────── -->
+<section class="ticker" aria-label="Trusted by service business owners across Australia">
+  <p class="ticker-label">Trusted by service business owners across Australia</p>
+  <div class="ticker-track" aria-hidden="true">
+    <span class="ticker-item">Coaches</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Consultants</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Freelancers</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Trades</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Therapists</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Creatives</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Health &amp; Wellness</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Personal Trainers</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Coaches</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Consultants</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Freelancers</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Trades</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Therapists</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Creatives</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Health &amp; Wellness</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">Personal Trainers</span><span class="ticker-dot">·</span>
+  </div>
+</section>
+<!-- ─── PAIN POINTS ───────────────────────────────────────────────────── -->
+<section class="pain" aria-labelledby="pain-heading">
+  <div class="container">
+    <div class="pain-header" data-reveal>
+      <span class="section-label light">Sound familiar?</span>
+      <h2 id="pain-heading">Most service businesses don't fail.<br><em>They get stuck.</em></h2>
+    </div>
+    <div class="pain-grid" id="pain-scroller">
+      <!-- Card 1: Starting out -->
+      <a href="https://revday-b4uh451y.scoreapp.com/" class="pain-card-link" target="_blank" rel="noopener noreferrer" draggable="false">
+        <div class="pain-card">
+          <p class="pain-card-stage">Starting out · 0–2 clients</p>
+          <h3>You're ready to go, but don't know where to&nbsp;start</h3>
+          <ul>
+            <li>Unsure what to set up first</li>
+            <li>Offer feels vague or unconfident</li>
+            <li>Tech feels overwhelming</li>
+            <li>Sales calls feel like guesswork</li>
+          </ul>
+          <span class="pain-impact-hint">The real cost →</span>
+          <div class="pain-result">
+            <div class="pain-result-inner">
+              <span class="pain-result-bold">What actually happens:</span> You spend months setting up the wrong things in the wrong order. By the time you realise, you're rebuilding from scratch and your confidence has taken a hit.
+              <span class="pain-result-next">BLAST fixes this from day&nbsp;one.</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Card 2: Messy middle -->
+      <a href="https://revday-b4uh451y.scoreapp.com/" class="pain-card-link" target="_blank" rel="noopener noreferrer" draggable="false">
+        <div class="pain-card">
+          <p class="pain-card-stage">Messy middle · 2–5 clients</p>
+          <h3>You're getting interest, but nothing feels&nbsp;solid</h3>
+          <ul>
+            <li>Following up from memory, losing leads</li>
+            <li>Replies aren't consistent</li>
+            <li>Bookings feel chaotic</li>
+            <li>Every week feels like starting over</li>
+          </ul>
+          <span class="pain-impact-hint">The real cost →</span>
+          <div class="pain-result">
+            <div class="pain-result-inner">
+              <span class="pain-result-bold">What actually happens:</span> Good leads go cold because follow-up falls through the cracks. You're working harder than ever but your revenue doesn't reflect&nbsp;it.
+              <span class="pain-result-next">BLAST installs the systems that stop the&nbsp;leak.</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Card 3: Growth -->
+      <a href="https://revday-b4uh451y.scoreapp.com/" class="pain-card-link" target="_blank" rel="noopener noreferrer" draggable="false">
+        <div class="pain-card">
+          <p class="pain-card-stage">Growth · 5+ clients</p>
+          <h3>You have clients, but growth feels heavier than it&nbsp;should</h3>
+          <ul>
+            <li>Juggling too many tools</li>
+            <li>Nothing is in one place</li>
+            <li>You're the bottleneck in your own business</li>
+            <li>More clients means more chaos, not more freedom</li>
+          </ul>
+          <span class="pain-impact-hint">The real cost →</span>
+          <div class="pain-result">
+            <div class="pain-result-inner">
+              <span class="pain-result-bold">What actually happens:</span> You hit an invisible ceiling. Every new client adds pressure instead of profit. Growth stalls because the business depends entirely on&nbsp;you.
+              <span class="pain-result-next">CSA removes you as the bottleneck.</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Card 4: CTA (desktop only) -->
+      <a href="https://revday-b4uh451y.scoreapp.com/" class="pain-card-link pain-cta-desktop" target="_blank" rel="noopener noreferrer" draggable="false">
+        <div class="pain-card pain-cta-card">
+          <div class="pain-cta-front">
+            <span class="pain-card-stage">Not sure where you are?</span>
+            <h3>Take the free clarity&nbsp;quiz</h3>
+            <p>Find out exactly where you're stuck and what to fix first. Takes 4&nbsp;minutes.</p>
+            <div class="pain-cta-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+          </div>
+          <div class="pain-cta-hover">
+            <span class="pain-card-stage">Your personalised roadmap</span>
+            <h3 class="pain-cta-hover-title">Know exactly what to do&nbsp;next</h3>
+            <ul class="pain-cta-list">
+              <li>See which stage you're actually at</li>
+              <li>Find the biggest gap costing you clients</li>
+              <li>Get a clear first step, not a list of&nbsp;options</li>
+            </ul>
+            <div class="pain-cta-footer">
+              <span class="pain-cta-footnote">Free · Takes 4 minutes</span>
+              <div class="pain-cta-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Card 4: CTA (mobile only) -->
+      <a href="https://revday-b4uh451y.scoreapp.com/" class="pain-card-link pain-cta-mobile" target="_blank" rel="noopener noreferrer" draggable="false">
+        <div class="pain-card pain-cta-card pain-cta-card-mobile">
+          <h3 class="pain-cta-mobile-title">Take the clarity&nbsp;quiz</h3>
+          <p class="pain-cta-mobile-sub">Free · Takes 4 minutes</p>
+          <div class="pain-cta-mobile-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- Mobile dots -->
+    <div class="pain-dots" id="pain-dots">
+      <button type="button" class="pain-dot active" data-index="0" aria-label="Card 1"></button>
+      <button type="button" class="pain-dot" data-index="1" aria-label="Card 2"></button>
+      <button type="button" class="pain-dot" data-index="2" aria-label="Card 3"></button>
+      <button type="button" class="pain-dot" data-index="3" aria-label="Card 4"></button>
+    </div>
+    <p class="pain-footer-note">Each stage needs something different. That's why revday offers <strong>BLAST</strong> and <strong>CSA</strong>.</p>
+  </div>
+</section>
+<!-- ─── METHOD ────────────────────────────────────────────────────────────── -->
+<section class="method" aria-labelledby="method-heading">
+  <div class="container">
+    <div class="method-header" data-reveal>
+      <span class="section-label">The revday method</span>
+      <h2 id="method-heading">A simple, structured path<br><em>from stuck to scalable</em></h2>
+    </div>
+    <div class="method-steps" data-reveal-stagger>
+      <div class="method-step">
+        <div class="method-step-num" aria-hidden="true">1</div>
+        <h3>Diagnose</h3>
+        <p>Take the 4-minute quiz. We identify what's actually blocking your growth, not assumptions, real friction.</p>
+        <span class="method-step-pill">Clarity in minutes</span>
+      </div>
+      <div class="method-step">
+        <div class="method-step-num" aria-hidden="true">2</div>
+        <h3>Clarify</h3>
+        <p>Nail your offer, positioning, and pricing before spending a cent on marketing or tools.</p>
+        <span class="method-step-pill">Confidence to sell</span>
+      </div>
+      <div class="method-step">
+        <div class="method-step-num" aria-hidden="true">3</div>
+        <h3>Build</h3>
+        <p>Install the right foundations, website, bookings, follow-up, payments, in the right order.</p>
+        <span class="method-step-pill">Systems that work</span>
+      </div>
+      <div class="method-step">
+        <div class="method-step-num" aria-hidden="true">4</div>
+        <h3>Grow</h3>
+        <p>We stay with you. Coaching, support, and refinement as your client numbers increase.</p>
+        <span class="method-step-pill">Growth without burnout</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ─── PRODUCTS ──────────────────────────────────────────────────────────── -->
+<section class="products" aria-labelledby="products-heading">
+  <div class="container">
+    <div class="products-header" data-reveal>
+      <span class="section-label">Two stages. One clear path.</span>
+      <h2 id="products-heading">Choose the program that matches<br><em>where you are right now</em></h2>
+      <p>Not sure which one? The clarity quiz will tell you in 4 minutes.</p>
+    </div>
+    <div class="products-grid" data-reveal-stagger>
+      <div class="product-card light">
+        <span class="product-badge">0–5 Clients · Getting started</span>
+        <h3>BLAST</h3>
+        <p class="product-card-full">Business Launchpad &amp; Sales Training</p>
+        <p>Starting is overwhelming. BLAST gives you structure, clarity, and real sales confidence. We help you validate your offer, sign your first clients, and build properly from day one.</p>
+        <div class="product-features">
+          <div class="product-feature"><span class="product-feature-check">✓</span>Offer clarity and positioning</div>
+          <div class="product-feature"><span class="product-feature-check">✓</span>Professional website and booking setup</div>
+          <div class="product-feature"><span class="product-feature-check">✓</span>Sales call structure and training</div>
+          <div class="product-feature"><span class="product-feature-check">✓</span>Automated follow-up sequence</div>
+          <div class="product-feature"><span class="product-feature-check">✓</span>Weekly 1:1 coaching sessions</div>
+          <div class="product-feature"><span class="product-feature-check">✓</span>24/7 support, never get stuck</div>
+        </div>
+        <div class="product-ctas">
+          <a href="https://www.revday.io/services/blast" class="btn btn-primary">Explore BLAST</a>
+          <a href="https://revday-b4uh451y.scoreapp.com/" class="btn btn-outline-dark ghl-popup-quiz" target="_blank" rel="noopener noreferrer">Take the quiz first</a>
+        </div>
+      </div>
+      <div class="product-card dark">
+        <span class="product-badge">5+ Clients · Ready to scale</span>
+        <h3>CSA</h3>
+        <p class="product-card-full">Complete Sales Accelerator</p>
+        <p>Your business works. But it depends on you. CSA installs the systems, automation, and sales infrastructure required to grow without burning out.</p>
+        <div class="product-features">
+          <div class="product-feature"><span class="product-feature-check">✓</span>Full sales pipeline and CRM setup</div>
+          <div class="product-feature"><span class="product-feature-check">✓</span>Automated bookings and reminders</div>
+          <div class="product-feature"><span class="product-feature-check">✓</span>Consistent enquiry-to-close process</div>
+          <div class="product-feature"><span class="product-feature-check">✓</span>Systems that work without micromanaging</div>
+          <div class="product-feature"><span class="product-feature-check">✓</span>1:1 growth coaching</div>
+          <div class="product-feature"><span class="product-feature-check">✓</span>24/7 support throughout</div>
+        </div>
+        <div class="product-ctas">
+          <a href="https://www.revday.io/services/csa" class="btn btn-primary">Explore CSA</a>
+          <a href="https://revday-b4uh451y.scoreapp.com/" class="btn btn-outline-dark ghl-popup-quiz" target="_blank" rel="noopener noreferrer">Take the quiz first</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ─── BEFORE / AFTER ────────────────────────────────────────────────────── -->
+<section class="ba" aria-labelledby="ba-heading">
+  <div class="container">
+    <div class="ba-header" data-reveal>
+      <span class="section-label">The transformation</span>
+      <h2 id="ba-heading">Real businesses. Real clarity.<br><em>Real results.</em></h2>
+    </div>
+    <div class="ba-grid" data-reveal-stagger>
+      <div class="ba-card before">
+        <p class="ba-card-label">Without revday</p>
+        <div class="ba-items">
+          <div class="ba-item"><span class="ba-icon">✗</span>Following up from memory, losing leads</div>
+          <div class="ba-item"><span class="ba-icon">✗</span>Guessing what to charge, underpricing</div>
+          <div class="ba-item"><span class="ba-icon">✗</span>Enquiries slipping through the cracks</div>
+          <div class="ba-item"><span class="ba-icon">✗</span>Sales depending entirely on you</div>
+          <div class="ba-item"><span class="ba-icon">✗</span>Growth feeling harder than it should</div>
+          <div class="ba-item"><span class="ba-icon">✗</span>No support, left to figure it out alone</div>
+        </div>
+      </div>
+      <div class="ba-card after">
+        <p class="ba-card-label">With revday</p>
+        <div class="ba-items">
+          <div class="ba-item"><span class="ba-icon ba-icon-green">✓</span>Automated bookings and reminders</div>
+          <div class="ba-item"><span class="ba-icon ba-icon-green">✓</span>Clear, packaged offer with confident pricing</div>
+          <div class="ba-item"><span class="ba-icon ba-icon-green">✓</span>Structured pipeline and consistent closes</div>
+          <div class="ba-item"><span class="ba-icon ba-icon-green">✓</span>Systems that work without micromanaging</div>
+          <div class="ba-item"><span class="ba-icon ba-icon-green">✓</span>Growth that feels controlled, not chaotic</div>
+          <div class="ba-item"><span class="ba-icon ba-icon-green">✓</span>Expert support and coaching at every step</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ─── TESTIMONIALS ──────────────────────────────────────────────────────── -->
+<section class="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="testimonials-header" data-reveal>
+      <span class="section-label">Client stories</span>
+      <h2 id="testimonials-heading">Don't take our word for it</h2>
+      <p>Real reviews from real service business owners across Australia.</p>
+    </div>
+    <div class="reviews-widget-wrap">
+      <script src="https://reputationhub.site/reputation/assets/review-widget.js"></script>
+      <iframe class="lc_reviews_widget" src="https://reputationhub.site/reputation/widgets/review_widget/nEVZhTSOV8O07l1C1YTn" title="Customer reviews"></iframe>
+    </div>
+  </div>
+</section>
+<!-- ─── QUIZ CTA ───────────────────────────────────────────────────────────── -->
+<section class="quiz-cta" aria-labelledby="quiz-heading">
+  <div class="container">
+    <div class="quiz-cta-inner">
+      <span class="section-label light">Free · Takes 4 minutes</span>
+      <h2 id="quiz-heading">Find out exactly <em>where you're stuck</em><br>and what to fix first</h2>
+      <p>Answer a few quick questions and get a personalised breakdown of your biggest gaps and the clearest next step to take.</p>
+      <div class="quiz-steps" data-reveal-stagger>
+        <div class="quiz-step">
+          <span class="quiz-step-num">1</span>
+          Answer 10 quick questions
+        </div>
+        <span class="quiz-step-arrow" aria-hidden="true">→</span>
+        <div class="quiz-step">
+          <span class="quiz-step-num">2</span>
+          See your personalised score
+        </div>
+        <span class="quiz-step-arrow" aria-hidden="true">→</span>
+        <div class="quiz-step">
+          <span class="quiz-step-num">3</span>
+          Know exactly what to fix first
+        </div>
+      </div>
+      <a href="https://revday-b4uh451y.scoreapp.com/" class="btn btn-primary btn-primary-lg ghl-popup-quiz" target="_blank" rel="noopener noreferrer">
+        Take the free clarity quiz
+      </a>
+      <p class="quiz-cta-note">No high-pressure sales. No commitment. Just clarity.</p>
+    </div>
+  </div>
+</section>
+<!-- ─── FAQ ───────────────────────────────────────────────────────────────── -->
+<section class="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="faq-header" data-reveal>
+      <span class="section-label">Still have questions?</span>
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      <p>Everything you need to know before taking the next step.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false">What is revday?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer">revday is a guided service for business owners that provides the tools, training, and systems to build a solid foundation and scale without burnout or guesswork. You get all-in-one software plus hands-on 1:1 support, so you're never left figuring it out alone.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false">Is this for brand new businesses or ones already running?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer">Both. BLAST works for those just starting or feeling messy at 0–5 clients. CSA is for established businesses with 5+ clients who are ready to scale properly and remove themselves as the bottleneck.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false">I'm not technical. Is that a problem?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer">Not at all. We guide you step by step and set things up with you. You never need to figure anything out on your own. No coding, no complex software knowledge, just follow the process.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false">Is revday software or a service?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer">Both. You get all-in-one platform software plus hands-on 1:1 support, coaching, and guidance so you're never left figuring it out alone. It's a software with a service, not just a tool you're handed and left with.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false">How long does it take to get set up?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer">Most clients start seeing clarity and early wins very quickly. The full setup depends on your starting point, but the goal is always progress over perfection. We move at a pace that works for you.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false">Do I have to commit long term?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer">No. BLAST is about getting your foundation right first. You can leave with 30 days notice, no lock-in contracts. We want you to stay because it's working, not because you're trapped.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false">What's the difference between BLAST and CSA?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer">BLAST is for service business owners at 0–5 clients who need to build their foundation, offer, website, bookings, and sales confidence. CSA is for those already at 5+ clients who need to systematise, automate, and scale without it all depending on them personally.</div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false">What kind of support do I get?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer">You get 24/7 access to support, weekly 1:1 coaching sessions, and a team that is genuinely invested in your results. You're never left waiting days for a reply or stuck on something you can't figure out.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============================================================
+     FOOTER (from Code 2 — BLAST)
+============================================================ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/nEVZhTSOV8O07l1C1YTn/media/666c388b94d4422f58daa64b.svg" alt="revday" loading="lazy">
+      <p>Software with a Service for service business owners. 🇦🇺 Australian owned and operated.</p>
+      <div class="footer-social">
+        <a href="https://au.linkedin.com/in/noahcohen-enablement" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>We help</h4>
+        <ul>
+          <li><a href="https://www.revday.io/services/blast">BLAST</a></li>
+          <li><a href="https://www.revday.io/services/csa">CSA</a></li>
+          <li><a href="https://www.revday.io/features">Platform features</a></li>
+          <li><a href="https://www.revday.io/start">How it works</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://www.revday.io/about">Our story</a></li>
+          <li><a href="https://www.revday.io/blog-1873">Blog</a></li>
+          <li><a href="https://www.revday.io/contact">Contact us</a></li>
+          <li><a href="https://www.revday.io/partners/affiliate">Refer &amp; earn</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://www.revday.io/tools">Free tools</a></li>
+          <li><a href="https://tools.revday.io/offer-pricing-tool" target="_blank" rel="noopener noreferrer">Offer &amp; price tool</a></li>
+          <li><a href="https://revday-b4uh451y.scoreapp.com/" target="_blank" rel="noopener noreferrer">Clarity quiz</a></li>
+          <li><a href="https://updates.mycrmtraining.com/" target="_blank" rel="noopener noreferrer">New features &amp; updates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="https://www.revday.io/legal/privacy">Terms &amp; Privacy Policy</a></li>
+          <li><a href="https://app.revday.io/" target="_blank" rel="noopener noreferrer">Log in</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="footer-year"></span> revday. All rights reserved.</p>
+  </div>
+</footer>
+</div><!-- /.page-wrap -->
+<!-- ─── SCRIPTS ────────────────────────────────────────────────────────────── -->
+<script>
+  /* ── Footer year ── */
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+  /* ── Scroll reveal (Code 2 style) ── */
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+  /* ── Mobile nav (Code 2 style) ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  const mobileClose = document.getElementById('mobile-close');
+  function openNav() {
+    mobileNav.hidden = false;
+    requestAnimationFrame(() => mobileNav.classList.add('open'));
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    mobileNav.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    setTimeout(() => { mobileNav.hidden = true; }, 350);
+  }
+  hamburger.addEventListener('click', openNav);
+  mobileClose.addEventListener('click', closeNav);
+  /* Close mobile nav when any link inside is tapped */
+  mobileNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      closeNav();
+    });
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeNav(); closeBooking(); } });
+  /* ── Booking modal (Code 2 style) ── */
+  const bookingOverlay = document.getElementById('booking-overlay');
+  const bookingClose = document.getElementById('booking-close');
+  function openBooking() {
+    bookingOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBooking() {
+    bookingOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.ghl-popup-chat').forEach(btn => {
+    btn.addEventListener('click', e => { e.preventDefault(); openBooking(); });
+  });
+  bookingClose.addEventListener('click', closeBooking);
+  /* Close on clicking outside the booking content area (header/iframe) */
+  bookingOverlay.addEventListener('click', function(e) {
+    if (e.target === bookingOverlay || e.target.classList.contains('booking-box')) closeBooking();
+  });
+  /* ── Nav dropdown touch support (for tablets) ── */
+  document.querySelectorAll('.nav-drop-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var drop = this.closest('.nav-drop');
+      var isOpen = drop.classList.contains('touch-open');
+      document.querySelectorAll('.nav-drop').forEach(function(d) { d.classList.remove('touch-open'); });
+      if (!isOpen) drop.classList.add('touch-open');
+      this.setAttribute('aria-expanded', !isOpen);
+    });
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-drop')) {
+      document.querySelectorAll('.nav-drop').forEach(function(d) { d.classList.remove('touch-open'); });
+    }
+  });
+  /* ── Hero ICP stage selector (interactive cards) ── */
+  document.querySelectorAll('.hero-stage-card').forEach(card => {
+    card.addEventListener('click', function() {
+      document.querySelectorAll('.hero-stage-card').forEach(c => c.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+  /* ── FAQ accordion ────────────────────────────────────────────────────── */
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const item = this.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  /* ── Method step scroll animation ───────────────────────────────────────── */
+  const methodSteps = document.querySelectorAll('.method-step');
+  if (methodSteps.length) {
+    const stepObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const numEl = entry.target.querySelector('.method-step-num');
+          if (numEl) numEl.classList.add('active');
+        }
+      });
+    }, { threshold: 0.5 });
+    methodSteps.forEach(step => stepObserver.observe(step));
+  }
+  /* ── Page transitions (Code 2 style) ─────────────────────────────────── */
+  const overlay = document.getElementById('page-transition');
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.target === '_blank') return;
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      overlay.classList.add('active');
+      setTimeout(() => { window.location.href = href; }, 350);
+    });
+  });
+  window.addEventListener('pageshow', () => overlay.classList.remove('active'));
+  /* ── Pain cards — mobile swipe + dot indicator ──────────────────── */
+  (function() {
+    const scroller = document.getElementById('pain-scroller');
+    const dots     = document.querySelectorAll('.pain-dot');
+    if (!scroller || !dots.length) return;
+    function updateDots() {
+      const firstCard = scroller.querySelector('.pain-card-link');
+      if (!firstCard) return;
+      const cardW = firstCard.offsetWidth + 14;
+      const idx   = Math.round(scroller.scrollLeft / cardW);
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }
+    scroller.addEventListener('scroll', updateDots, { passive: true });
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        const firstCard = scroller.querySelector('.pain-card-link');
+        if (!firstCard) return;
+        const cardW = firstCard.offsetWidth + 14;
+        scroller.scrollTo({ left: cardW * i, behavior: 'smooth' });
+      });
+    });
+    /* ── Touch-drag: improved swipe with velocity snapping ── */
+    let startX = 0;
+    let startY = 0;
+    let startScroll = 0;
+    let isDragging = false;
+    let isSwiping = false;
+    let lastMoveX = 0;
+    let lastMoveTime = 0;
+    let velocity = 0;
+    const SWIPE_THRESHOLD = 10;
+    const VELOCITY_THRESHOLD = 0.3;
+    // Disable native drag on anchor cards
+    scroller.querySelectorAll('.pain-card-link').forEach(function(link) {
+      link.setAttribute('draggable', 'false');
+      link.addEventListener('dragstart', function(e) { e.preventDefault(); });
+    });
+    function getCardWidth() {
+      var firstCard = scroller.querySelector('.pain-card-link');
+      return firstCard ? firstCard.offsetWidth + 14 : 300;
+    }
+    function snapToNearest(vel) {
+      var cardW = getCardWidth();
+      var currentIdx = Math.round(scroller.scrollLeft / cardW);
+      // Use velocity to determine if we should go to next/prev card
+      if (Math.abs(vel) > VELOCITY_THRESHOLD) {
+        currentIdx = vel > 0 ? Math.floor(scroller.scrollLeft / cardW) : Math.ceil(scroller.scrollLeft / cardW);
+      }
+      var maxIdx = Math.max(0, scroller.children.length - 1);
+      currentIdx = Math.max(0, Math.min(currentIdx, maxIdx));
+      scroller.style.scrollSnapType = '';
+      scroller.style.scrollBehavior = 'smooth';
+      scroller.scrollTo({ left: cardW * currentIdx, behavior: 'smooth' });
+      requestAnimationFrame(function() {
+        setTimeout(function() {
+          scroller.style.scrollBehavior = '';
+          scroller.style.scrollSnapType = 'x mandatory';
+          updateDots();
+        }, 350);
+      });
+    }
+    scroller.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      lastMoveX = startX;
+      lastMoveTime = Date.now();
+      velocity = 0;
+      startScroll = scroller.scrollLeft;
+      isDragging = true;
+      isSwiping = false;
+      scroller.style.scrollSnapType = 'none';
+      scroller.style.scrollBehavior = 'auto';
+    }, { passive: true });
+    scroller.addEventListener('touchmove', function(e) {
+      if (!isDragging) return;
+      var currentX = e.touches[0].clientX;
+      var dx = currentX - startX;
+      var dy = e.touches[0].clientY - startY;
+      if (!isSwiping) {
+        if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy) * 1.2) {
+          isSwiping = true;
+        } else if (Math.abs(dy) > SWIPE_THRESHOLD) {
+          isDragging = false;
+          scroller.style.scrollSnapType = 'x mandatory';
+          scroller.style.scrollBehavior = '';
+          return;
+        }
+      }
+      if (isSwiping) {
+        e.preventDefault();
+        // Track velocity
+        var now = Date.now();
+        var dt = now - lastMoveTime;
+        if (dt > 0) {
+          velocity = (lastMoveX - currentX) / dt;
+        }
+        lastMoveX = currentX;
+        lastMoveTime = now;
+        scroller.scrollLeft = startScroll - dx;
+      }
+    }, { passive: false });
+    scroller.addEventListener('touchend', function() {
+      if (!isDragging) return;
+      isDragging = false;
+      if (isSwiping) {
+        snapToNearest(velocity);
+      } else {
+        scroller.style.scrollSnapType = 'x mandatory';
+        scroller.style.scrollBehavior = '';
+      }
+    }, { passive: true });
+    scroller.addEventListener('touchcancel', function() {
+      isDragging = false;
+      scroller.style.scrollSnapType = 'x mandatory';
+      scroller.style.scrollBehavior = '';
+    }, { passive: true });
+    // Block link clicks that happen at the end of a swipe gesture
+    scroller.querySelectorAll('.pain-card-link').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        if (isSwiping) {
+          e.preventDefault();
+          e.stopPropagation();
+          isSwiping = false;
+        }
+      });
+    });
+  })();
+  /* ── Apple-style scroll reveal observer ──────────────────── */
+  (function() {
+    const revealEls2 = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if (!revealEls2.length) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls2.forEach(el => observer.observe(el));
+  })();
+</script>
+</body>
+</html>
+
