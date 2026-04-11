@@ -246,6 +246,7 @@ section, .hero, .pain, .method, .products, .ba, .testimonials, .quiz-cta, .faq, 
 /* ============================================================
    MOBILE DRAWER
 ============================================================ */
+/* Line 227 ke aas paas */
 .mobile-nav {
   position: fixed;
   inset: 0;
@@ -257,16 +258,15 @@ section, .hero, .pain, .method, .products, .ba, .testimonials, .quiz-cta, .faq, 
   flex-direction: column;
   padding: var(--sp-6);
   overflow-y: auto;
-
-  /* ✅ FIX */
-  pointer-events: none;
+  
+  /* Yeh line add karein */
+  pointer-events: none; 
 }
 
+/* Jab menu khulay tab pointer events enable hon */
 .mobile-nav.open {
   transform: translateX(0);
-
-  /* ✅ FIX */
-  pointer-events: auto;
+  pointer-events: auto; 
 }
 .mobile-nav-header {
   display: flex; justify-content: space-between; align-items: center;
@@ -1095,19 +1095,17 @@ section, .hero, .pain, .method, .products, .ba, .testimonials, .quiz-cta, .faq, 
   .pain { overflow: hidden; }
   .pain > .container { overflow: hidden; max-width: 100%; padding: 0; }
   .pain-grid {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: visible; /* ✅ FIX */
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* ✅ smooth scroll */
-  gap: 14px;
-  padding: 8px 24px 20px;
-  grid-template-columns: none;
-
-  /* ❌ REMOVE THESE */
-  /* touch-action: pan-x pan-y; */
-  /* overscroll-behavior-x: contain; */
-}
+    display: flex;
+    overflow-x: auto;
+    /* Is property ko 'touch' ya 'auto' rakhein, 'contain' scroll block kar sakta hai */
+    overscroll-behavior-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    gap: 14px;
+    padding: 8px 24px 20px;
+    
+    /* Agar niche wali line mojood hai toh isay remove kar dein ya 'pan-y' add karein */
+    touch-action: pan-x pan-y; 
+  }
   .pain-grid::before,
   .pain-grid::after { display: none; }
   .pain-grid::-webkit-scrollbar { display: none; }

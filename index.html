@@ -614,7 +614,7 @@
     mobileNav.classList.remove('open');
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    document.body.style.overflow = 'visible';
     setTimeout(() => { mobileNav.hidden = true; }, 350);
   }
   hamburger.addEventListener('click', openNav);
