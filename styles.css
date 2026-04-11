@@ -1075,7 +1075,6 @@ section, .hero, .pain, .method, .products, .ba, .testimonials, .quiz-cta, .faq, 
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     gap: 14px;
     padding: 8px 24px 20px;
     grid-template-columns: none;
