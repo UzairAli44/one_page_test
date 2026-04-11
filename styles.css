@@ -5,10 +5,13 @@
 * {
   touch-action: manipulation;
 }
+/* styles.css - Line 10 ke aas paas */
 html {
   scroll-behavior: auto;
   -webkit-text-size-adjust: 100%;
+  height: -webkit-fill-available; /* Mobile viewport height fix */
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #1F2733;
@@ -16,8 +19,11 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* overflow-x: hidden ko sirf x-axis tak mehdood rakhein aur overflow-y ko auto rehne dein */
+  overflow-x: hidden; 
+  overflow-y: auto; 
+  position: relative;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
 }
 .page-wrap {
   width: 100%;
@@ -368,7 +374,7 @@ section, .hero, .pain, .method, .products, .ba, .testimonials, .quiz-cta, .faq, 
   background: var(--dark); pointer-events: none;
   opacity: 0; transition: opacity .35s;
 }
-.page-transition.active { opacity: 1; pointer-events: all; }
+.page-transition.active { opacity: 1; pointer-events: auto; }
 
 /* ============================================================
    HERO
@@ -1169,4 +1175,9 @@ section, .hero, .pain, .method, .products, .ba, .testimonials, .quiz-cta, .faq, 
 [data-reveal-stagger].revealed > *:nth-child(8) { opacity:1; transform:translateY(0); transition-delay:0.56s; }
 @media (prefers-reduced-motion: reduce) {
   [data-reveal], [data-reveal-stagger] > * { opacity:1; transform:none; transition:none; }
+}
+/* Yeh ensure karega ke jab menu band ho toh wo touch block na kare */
+.mobile-nav:not(.open) {
+  visibility: hidden;
+  pointer-events: none;
 }
