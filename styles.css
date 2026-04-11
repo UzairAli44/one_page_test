@@ -2,7 +2,10 @@
    RESET & TOKENS
 ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html {
+  scroll-behavior: auto;
+  -webkit-text-size-adjust: 100%;
+}
 body {
   font-family: 'Poppins', sans-serif;
   color: #1F2733;
@@ -239,15 +242,27 @@ section, .hero, .pain, .method, .products, .ba, .testimonials, .quiz-cta, .faq, 
    MOBILE DRAWER
 ============================================================ */
 .mobile-nav {
-  position: fixed; inset: 0; z-index: 600;
+  position: fixed;
+  inset: 0;
+  z-index: 600;
   background: var(--white);
   transform: translateX(100%);
   transition: transform .35s var(--ease-out);
-  display: flex; flex-direction: column;
+  display: flex;
+  flex-direction: column;
   padding: var(--sp-6);
   overflow-y: auto;
+
+  /* ✅ FIX */
+  pointer-events: none;
 }
-.mobile-nav.open { transform: translateX(0); }
+
+.mobile-nav.open {
+  transform: translateX(0);
+
+  /* ✅ FIX */
+  pointer-events: auto;
+}
 .mobile-nav-header {
   display: flex; justify-content: space-between; align-items: center;
   padding-bottom: var(--sp-6);
@@ -293,14 +308,22 @@ section, .hero, .pain, .method, .products, .ba, .testimonials, .quiz-cta, .faq, 
    BOOKING MODAL
 ============================================================ */
 .booking-overlay {
-  position: fixed; inset: 0; z-index: 1000;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
   background: var(--white);
-  display: flex; flex-direction: column;
-  opacity: 0; pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
   transition: opacity .25s;
   overflow: hidden;
 }
-.booking-overlay.open { opacity: 1; pointer-events: all; }
+
+.booking-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
 .booking-box {
   display: flex; flex-direction: column;
   width: 100%; height: 100%;
